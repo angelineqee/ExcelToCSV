@@ -29,6 +29,25 @@
     header('Content-Length: ' . filesize($zip_name));
     readfile($zip_name);
 
+    // loop through the files one by one
+    foreach(glob("CAT201_assignment/uploads./*") as $file){
+        // check if is a file and not sub-directory
+        if(is_file($file)){
+            // delete file
+            unlink($file);
+        }
+    }
+
+    foreach(glob("CAT201_assignment/converted./*") as $file){
+        // check if is a file and not sub-directory
+        if(is_file($file)){
+            // delete file
+            unlink($file);
+        }
+    }
+    
+    unlink("files.zip");
+   
 exit;
 
 ?>
