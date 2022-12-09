@@ -1,22 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="https://github.com/angelineqee/testingGIT/blob/main/Bee-icon.png?raw=true" />
+
+    <title>Convert Space</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="script.js" defer></script>
+
+    
+  </head>
 <body>
-    <form action="upload-action.php" method="post" enctype="multipart/form-data">
+    <h1 class="titleheader">CONVERT SPACE</h1>
+    <p class="text">Convert .xls to .csv!</p>
+    <div class="drop-box">
+      <form action="upload-action.php" method="post" enctype="multipart/form-data">
+        <label for="fileUpload" style="cursor: pointer;">
+            <p class="text2">
+                Click here to <br> choose file(s)
+            </p>
+        </label>
+        <input
+          id="fileUpload"
+          name="fileToUpload[]"
+          type="file"
+          style="display: none"
+          multiple
+        />
+        <div>
+            <input type="submit" value="Upload" name="submit" style="margin-top:20px;" class="uploadButton">
+        </div>
+        
+      </form>
+    </div>
+
+    <div class="wrap">
+        <div class="wrap2">
+          <div class="beebody"></div>
+          <div class="wing1"></div>
+          <div class="wing2"></div>
+          <div class="stinger"></div>
+          <div class="eyes">
+            <div class="pupil"></div>
+            <div class="eyes2">
+              <div class="pupil2"></div>
+            </div>
+          </div>
+          <div class="cloud1"></div>
+          <div class="cloud2"></div>
+          <div class="cloud3"></div>
+        </div>
+      </div>
+  
+      <p class="text3">Select more than one file when browsing for files to upload multiple files (max 3)</p>
+  
+      <table>
+        <col width="75" />
+        <col width="25" />
+        <thead>
+          <tr>
+            <th>File</th>
+            <th>Size</th>
+          </tr>
+        </thead>
+  
+        <td>
+          <div class="alignment">
+            <label id="fileName"></label>
+          </div>
+        </td>
+        <td>
+          <div>
+            <label id="fileSize"></label>
+          </div>
+        </td>
+        <tr>
+          <td>
+            <div class="alignment">
+              <label id="fileName2"></label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <label id="fileSize2"></label>
+            </div>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <div class="alignment">
+              <label id="fileName3"></label>
+            </div>
+          </td>
+          <td>
+            <div>
+              <label id="fileSize3"></label>
+            </div>
+          </td>
+        </tr>
+      </table>
+      
+        <form action="download-action.php" method="get" >
+            <input type="submit" value="Convert and Download" class="downloadButton">
+        </form>
+     
+      <div class="footer">
+        <a href="" id="AboutUs">About Us</a>
+      </div>
+    
+      <!-- The Modal -->
+      <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>
+              &#128029About Us&#127855
+            </h3>
+            <div class="container">
+              <div class="groupPhoto">
+                <img src="https://github.com/legna7710/GroupPhoto/blob/main/CAT201.png?raw=true" id="OurPhoto">
+              </div>
+              <div class="description">
+                <p>
+                  We are Year 2 students from the <i>School of Computer Sciences, Universiti Sains Malaysia.</i> <b> We love cats and CAT201! &#128525 </b>
+                  <br><br> <h3>Group Members:</h3>
+                  <h4>
+                  <b>  1. Angeline Teoh Qee 159023</b> 
+                  <br> <b>2. Angel Ang 159229</b> 
+                  <br> <b>3. Danish Irfan Bin Mohamad Shamirudin 155468</b> 
+                  <br> <b>4. LeeJu Yi 158713</b>
+                  </h4>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+   
+    </body>
+  </html>  
+
+
+
+<!-- <form action="upload-action.php" method="post" enctype="multipart/form-data">
         <p>Select file to upload:</p>
         <input type="file" name="fileToUpload[]">
         <input type="file" name="fileToUpload[]">
         <input type="file" name="fileToUpload[]">
         <input type="submit" value="Upload files" name="submit">
-    </form>
+    </form> -->
 
-    <form action="download-action.php" method="get">
+    <!-- <form action="download-action.php" method="get">
         <input type="submit" value="Download converted files.">
-      </form>
-</body>
-</html>
+      </form> -->
+
+<!-- import the webpage's javascript file -->

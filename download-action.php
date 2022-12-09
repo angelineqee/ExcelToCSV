@@ -6,47 +6,54 @@
     $path = __DIR__."./converted/";
     //Read filepath
     $files = scandir($path);
-    $filePaths = array_values(array_diff($files, array('.','..')));
-    for($i=0;$i<sizeof($filePaths);$i++){
-        $filePaths[$i] = $path.$filePaths[$i]; 
+    if(count($files) == 2){
+        echo '<script>alert("No file uploaded!")</script>';
     }
-
-    $zip = new ZipArchive();
-    $zip_name = "files.zip"; // Zip name
-    $zip->open($zip_name,  ZipArchive::CREATE);
-    foreach ($filePaths as $file) {
-        if(file_exists($file)){
-            $zip->addFromString(basename($file),  file_get_contents($file));  
+    else{
+        $filePaths = array_values(array_diff($files, array('.','..')));
+        for($i=0;$i<sizeof($filePaths);$i++){
+            $filePaths[$i] = $path.$filePaths[$i]; 
         }
-        else{
-            echo"file does not exist";
-        }
-    }
-    $zip->close();
 
-    header('Content-Type: application/zip');
-    header('Content-disposition: attachment; filename='.$zip_name);
-    header('Content-Length: ' . filesize($zip_name));
-    readfile($zip_name);
-
-    // loop through the files one by one
-    foreach(glob("CAT201_assignment/uploads./*") as $file){
-        // check if is a file and not sub-directory
-        if(is_file($file)){
-            // delete file
-            unlink($file);
+        $zip = new ZipArchive();
+        $zip_name = "files.zip"; // Zip name
+        $zip->open($zip_name,  ZipArchive::CREATE);
+        foreach ($filePaths as $file) {
+            if(file_exists($file)){
+                $zip->addFromString(basename($file),  file_get_contents($file));  
+            }
+            else{
+                echo"file does not exist";
+            }
         }
-    }
+        $zip->close();
 
-    foreach(glob("CAT201_assignment/converted./*") as $file){
-        // check if is a file and not sub-directory
-        if(is_file($file)){
-            // delete file
-            unlink($file);
+        header('Content-Type: application/zip');
+        header('Content-disposition: attachment; filename='.$zip_name);
+        header('Content-Length: ' . filesize($zip_name));
+        readfile($zip_name);
+
+        // loop through the files one by one
+        foreach(glob("CAT201_assignment/uploads./*") as $file){
+            // check if is a file and not sub-directory
+            if(is_file($file)){
+                // delete file
+                unlink($file);
+            }
         }
+
+        foreach(glob("CAT201_assignment/converted./*") as $file){
+            // check if is a file and not sub-directory
+            if(is_file($file)){
+                // delete file
+                unlink($file);
+            }
+        }
+        
+        unlink("files.zip");
     }
     
-    unlink("files.zip");
+    
    
 exit;
 

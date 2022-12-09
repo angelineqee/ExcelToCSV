@@ -1,0 +1,500 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  /* adjust typography defaults */
+  body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    right: 100%;
+    background-color:blue;
+    background-image: linear-gradient(#E8F5FF, #97D4FF);
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+  }
+  
+  
+  .titleheader{
+    color: #2E2F2F;
+    text-align: center;
+    letter-spacing: 0.5em;
+    background-color: #FFFEFB;
+    margin: -18px -20px 18px -20px;
+    padding: 30px 10px 16px 16px;
+    border-radius: 30px;
+    font-family: "Monaco", monospace;
+    font-weight: 900;
+  }
+  
+  .drop-box{
+    max-width: 350px;
+    height: 200px;
+    top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #5A5A5A;
+    border: 6px dashed #5585A9;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-left: 100px;
+    margin-bottom: 60px;
+  }
+  
+  
+  .drop-box-display{
+    display: none;
+  }
+  
+  .drop-box--over {
+    
+    border-style: solid;
+  }
+  
+  /* bee */
+  .wrap{
+    position: relative;
+  }
+  
+  .wrap2{
+    position: absolute;
+    margin-top: -150px;
+    right: 20%;
+    animation: dodging 1s ease-in-out infinite;
+  }
+  
+  @keyframes dodging{
+    0%{
+      top: 0;
+    }
+    50%{
+      top: 30px;
+    }
+    100%{
+      top: 0px;
+    }
+  }
+  
+  .beebody{
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 85px;
+    width: 75px;
+    border-radius: 100%;
+    background-color: #ffb733;
+    box-shadow: 20px 0 0 #000000,
+                40px -3px 0 #ffb733,
+                60px -7px 0 #000000,
+                80px -11px 0 #ffb733;
+  }
+  
+  .wing1{
+      position: absolute;
+      height: 85px;
+      width: 55px;
+      top: -50px;
+      right: 0px;
+      transform: rotate(20deg);
+      transform-origin: bottom right;
+      border-top-right-radius: 100%;
+      border-bottom-left-radius: 100%;
+      border-top-left-radius: 10px;
+      background-color: #FFFFFF;
+      z-index:-1;
+      filter: blur(1px);
+  }
+  
+  
+  .wing2{
+      position: absolute;
+      height: 85px;
+      width: 55px;
+      top: -50px;
+      right: 0px;
+      transform: rotate(80deg);
+      transform-origin: bottom right;
+      border-top-right-radius: 100%;
+      border-bottom-left-radius: 100%;
+      border-top-left-radius: 10px;
+      background-color: #FFFFFF;
+      z-index: 1;
+      filter: blur(1px);
+  }
+  
+  
+  .stinger{
+      position: absolute;
+      height: 85px;
+      width: 55px;
+      top: -10px;
+      right: -80px;
+      transform: rotate(320deg);
+      border-top-right-radius: 50%;
+      border-bottom-left-radius: 100%;
+      border-top-left-radius: 10px;
+      background-color: #000000;
+      z-index: -1;
+  }
+  
+  .eyes{
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      top: 13px;
+      right: 50px;
+      background-color: #FFFFFF;
+      border-radius: 100%
+  }
+  
+  .pupil{
+    position: absolute;
+      height: 10px;
+      width: 10px;
+      top: 13px;
+      right: 2px;
+      background-color: #000000;
+      border-radius: 100%
+  }
+  
+  .eyes2{
+      position: absolute;
+      height: 40px;
+      width: 40px;
+      top: 13px;
+      right: -30px;
+      background-color: #FFFFFF;
+      border-radius: 100%
+  }
+  
+  .pupil2{
+      position: absolute;
+      height: 10px;
+      width: 10px;
+      top: 13px;
+      right: 2px;
+      background-color: #000000;
+      border-radius: 100%
+    
+  }
+  
+  .cloud1{
+      position: absolute;
+      height: 30px;
+      width: 30px;
+      top: 30px;
+      right: 500px;
+      border-radius: 100%;
+      box-shadow: 50px 50px 2px rgba(255,255,255,1.0),
+                  30px 55px 1px rgba(255,255,255,1.0),
+                  10px 50px 1px rgba(255,255,255,1.0),
+                  20px 35px 1px rgba(255,255,255,1.0),
+                  40px 35px 1px rgba(255,255,255,1.0);
+      filter: blur(1px);
+        z-index: -1;
+  }
+  
+  
+  .cloud2{
+      position: absolute;
+      height: 60px;
+      width: 60px;
+      top: 45px;
+      left: -950px;
+      border-radius: 100%;
+      box-shadow: 100px 200px 2px rgba(255,255,255,1.0),
+                  50px 205px 1px rgba(255,255,255,1.0),
+                  10px 200px 1px rgba(255,255,255,1.0),
+                  35px 170px 1px rgba(255,255,255,1.0),
+                  70px 170px 1px rgba(255,255,255,1.0);
+      filter: blur(1px);
+        z-index: -1;
+  }
+  
+  
+  .cloud3{
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      top: 250px;
+      right: -150px;
+      border-radius: 100%;
+      box-shadow: 150px 200px 2px rgba(255,255,255,1.0),
+                  75px 205px 1px rgba(255,255,255,1.0),
+                  10px 200px 1px rgba(255,255,255,1.0),
+                  45px 150px 1px rgba(255,255,255,1.0),
+                  120px 150px 1px rgba(255,255,255,1.0);
+      filter: blur(1px);
+        z-index: 1;
+  }
+  
+  
+  .text
+  {
+    font-family: "Monaco", monospace;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    margin-left: 110px;
+    margin-bottom: 8px;
+    color: #545454;
+    
+  }
+  
+  .text2
+  {
+    letter-spacing: 0.07em;
+    padding-top: 60px; 
+    font-size:20px;
+    font-family: "Monaco", monospace;
+    font-weight: 600;
+  }
+  
+  .text3
+  {
+  
+    letter-spacing: 0.08em;
+    margin-left: 80px;
+    color: #696969;
+    font-family: "Monaco", monospace;
+  }
+  
+  .bolder
+  {
+    font-weight: 900;
+  }
+  
+  
+  /* conversion table */
+  
+  table
+  {
+        border: 4px dashed;
+        border-collapse: seperate;
+        border-radius: 6px;
+        border-color: #5585A9;
+        margin-bottom: 30px;
+        margin-left: 70px;
+        table-layout: fixed;
+        width: 60%;
+        height: 60%;
+        font-family: "Monaco", monospace;
+        text-align: center;
+        color: #545454;
+  }
+  
+  th,td
+  {
+    border-left: dashed #5585A9 4px;
+    border-top: dashed #5585A9 4px;
+  }
+  
+  table td
+  {
+    padding: 30px;
+    line-height: 0;
+  }
+  
+  th
+  {
+    border-top: none;
+    padding: 15px;
+  }
+  
+  td:first-child, 
+  th:first-child 
+  {
+       border-left: none;
+  }
+  
+  thead 
+  {
+      background-color: #FFFEFB;
+      color: #545454;
+      text-align: center;
+      opacity: 80%;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      font-size: 20px;
+  
+  }
+  
+  
+  
+  .alignment
+  {
+    text-align: left;
+  }
+  
+  .uploadButton
+  {
+    border: "5px";
+    color: #696969;
+    cursor: pointer;
+    background-color: #FFFEFB; 
+    float: left;
+    border-radius: 6px;
+    border-color: #A9A9A9;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-left: 28px;
+    margin-top: 30px;
+    font-family: "Monaco", monospace;
+    transition:0.3s;
+  }
+
+  .uploadButton:hover{
+    background-color:#5585A9;
+    color:#FFFEFB;
+  }
+  
+  .downloadButton
+  {
+    border: "5px";
+    color: #696969;
+    cursor: pointer;
+    background-color: #FFFEFB; 
+    float: left;
+    border-radius: 6px;
+    border-color: #A9A9A9;
+    padding: 16px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-left: 100px;
+    font-family: "Monaco", monospace;
+    margin-bottom:150px;
+    transition:0.3s;
+  }
+
+  .downloadButton:hover{
+    background-color:#5585A9;
+    color:#FFFEFB;
+  }
+  
+  #fileSize
+  {
+    text-align: center;
+    
+  }
+  
+  /* footer */
+  .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: floralwhite; opacity:60%;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+  }
+  
+  /* About Us */
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 65%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #AboutUs{
+    text-decoration:none;
+    font-weight: 700;
+  }
+  
+  #AboutUs:hover{
+    color:lightblue;
+  }
+  
+  #OurPhoto{
+    width:400px;
+    height:300px;
+  }
+  
+  .container{
+    display:flex;
+    flex-direction:row;
+  }
+  
+  .groupPhoto{
+    flex-basis:50%;
+    margin-right:20px;
+  }
+  
+  .description{
+    flex-basis:50%;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
